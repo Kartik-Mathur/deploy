@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: process.env.CORS_ORIGINS,
+    origin: "https://test-ochre-six-90.vercel.app/",
     credentials: true
 }))
 app.use(bodyParser.json({ limit: "4kb" }));
