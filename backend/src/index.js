@@ -21,7 +21,9 @@ app.use(express.static('public')); // To store the information that front end mi
 
 app.use(cookieParser());
 
-
+app.get('/',(req,res,next)=>{
+    res.json({"msg":"Hello from express"});
+})
 app.use('/', loginRouter);
 app.use('/restaurant', verifyJWT, restaurantRouter);
 app.use('/app', verifyJWT, userRouter);
