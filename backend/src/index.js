@@ -31,9 +31,9 @@ app.use('/app', verifyJWT, userRouter);
 
 mongoose.connect(`${process.env.DB_PATH}/${process.env.DB_NAME}`)
     .then(() => {
-        app.listen(PORT, () => {
-            console.log("http://localhost:" + PORT);
-        })
+        // app.listen(PORT, () => {
+        //     console.log("http://localhost:" + PORT);
+        // })
     })
     .catch(err => {
         console.log(err);
