@@ -11,7 +11,7 @@ import userRouter from "./routers/user.js";
 const app = express();
 
 app.use(cors({
-    origin: process.env.ALLOWED_ORIGIN || "*",
+    origin: process.env.CORS_ORIGINS,
     credentials: true
 }))
 app.use(bodyParser.json({ limit: "4kb" }));
@@ -19,9 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true, limit: "4kb" }));
 app.use(express.static('public'));
 app.use(cookieParser());
 
-app.use('/', loginRouter);
-app.use('/restaurant', verifyJWT, restaurantRouter);
-app.use('/app', verifyJWT, userRouter);
+// app.use('/', loginRouter);
+// app.use('/restaurant', verifyJWT, restaurantRouter);
+// app.use('/app', verifyJWT, userRouter);
 
 mongoose.connect(`${process.env.DB_PATH}/${process.env.DB_NAME}`)
     .then(() => {
