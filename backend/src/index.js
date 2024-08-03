@@ -9,7 +9,7 @@ import { verifyJWT } from "./utils/verifyJWT.js";
 import userRouter from "./routers/user.js";
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||4444;
 
 app.use(cors({
     origin: ["https://deploy-2g6b1wf4u-kartik-mathurs-projects.vercel.app/"],
