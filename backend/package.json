@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --env-file=.env src/index.js",
-    "vercel build":"echo hello"
+    "start": "nodemon --env-file=.env src/index.js"
   },
   "keywords": [],
   "author": "",
