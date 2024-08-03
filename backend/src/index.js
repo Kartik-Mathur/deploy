@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: "https://test-ochre-six-90.vercel.app/",
+    origin: "https://deploy-2g6b1wf4u-kartik-mathurs-projects.vercel.app/",
     credentials: true
 }))
 app.use(bodyParser.json({ limit: "4kb" }));
