@@ -24,7 +24,10 @@ app.use('/restaurant', verifyJWT, restaurantRouter);
 app.use('/app', verifyJWT, userRouter);
 
 mongoose.connect(`${process.env.DB_PATH}/${process.env.DB_NAME}`)
-    .then(() => console.log('Connected to MongoDB'))
+    .then(() => {
+        console.log('Connected to MongoDB')
+        app.listen(process.env.PORT);
+    })
     .catch(err => console.error('MongoDB connection error:', err));
 
 // Add a test route
@@ -32,6 +35,6 @@ app.get('/test', (req, res) => {
     res.json({ message: "API is working" });
 });
 
-app.listen(PORT);
+
 
 export default app;
