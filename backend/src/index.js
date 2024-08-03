@@ -36,3 +36,5 @@ mongoose.connect(`${process.env.DB_PATH}/${process.env.DB_NAME}`)
     .catch(err => {
         console.log(err);
     })
+
+export default app;
