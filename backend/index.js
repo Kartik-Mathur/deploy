@@ -3,10 +3,10 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import bodyParser from "body-parser";
-import loginRouter from './routers/login.js';
-import restaurantRouter from "./routers/admin.js";
-import { verifyJWT } from "./utils/verifyJWT.js";
-import userRouter from "./routers/user.js";
+// import loginRouter from './routers/login.js';
+// import restaurantRouter from "./routers/admin.js";
+// import { verifyJWT } from "./utils/verifyJWT.js";
+// import userRouter from "./routers/user.js";
 
 const app = express();
 
